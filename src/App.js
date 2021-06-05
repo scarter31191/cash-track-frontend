@@ -1,8 +1,12 @@
-// import logo from './logo.svg';
-// import './App.css';
 import React from 'react';
+import {connect} from 'react-redux';
+import {fetchAccounts} from './actions/fetchAccounts';
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchAccounts()
+  }
 
   render() {
     return (
@@ -13,4 +17,4 @@ class App extends React.Component {
   }   
 }
 
-export default App;
+export default connect(null, {fetchAccounts})(App);
