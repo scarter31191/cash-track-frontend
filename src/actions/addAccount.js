@@ -9,6 +9,8 @@ return (dispatch) => {
             method: 'POST',
             body: JSON.stringify(data)       
         })
+        .then(res => res.json())
+        .then(account => dispatch({type: 'ADD_ACCOUNT', payload: account}))
     }
 
 }
