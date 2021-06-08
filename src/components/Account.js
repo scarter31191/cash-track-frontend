@@ -7,9 +7,10 @@ const Account = (props) => {
 
     // console.log(props)
 
-    let account = props.accounts[props.match.params.id -1]
-    console.log(account)
+    // let account = props.accounts[props.match.params.id -1]
+    let account = props.accounts.filter(account => account.id == props.match.params.id)[0]
 
+    // console.log(account)
     return (
         <div>
             <h1>
