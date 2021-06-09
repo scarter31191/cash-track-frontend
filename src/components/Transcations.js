@@ -7,8 +7,8 @@ const Transactions = (props) => {
     console.log(props.transactions)
 
     const handleDelete = (transaction) => {
-        debugger;
-        props.deleteTransaction()
+        // debugger;
+        props.deleteTransaction(transaction.id, props.account.id)
     }
 
     return(
