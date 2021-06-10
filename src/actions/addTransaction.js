@@ -11,6 +11,7 @@ export const addTransaction = (transaction, accountId) => {
         })
         .then(res => res.json())
         .then(account => {
+            // debugger
             if (account.error) {
                 alert(account.error)
             } else {
