@@ -24,6 +24,7 @@ class AccountInput extends  React.Component {
             balance: '', 
             goal_amount: ''
         })
+        // this.props.account.push(`/accounts`)
     }
 
     render() {

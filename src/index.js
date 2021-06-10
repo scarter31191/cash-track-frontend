@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom';
 import accountReducer from './reducers/accountReducer'
+// import Navbar from './components/Navbar';
 
 
 import App from './App';
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Provider store={myStore}>
       <Router>
         <App />
+        {/* <Navbar /> */}
       </Router> 
     </Provider>,
   document.getElementById('root')
