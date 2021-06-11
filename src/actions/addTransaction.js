@@ -1,6 +1,7 @@
 export const addTransaction = (transaction, accountId) => {
 
     return (dispatch) => {
+        dispatch({ type: 'ADDING_ACCOUNTS'})
         fetch(`http://127.0.0.1:3000/api/v1/accounts/${accountId}/transactions`, {
             method: 'POST',
             headers: {

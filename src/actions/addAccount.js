@@ -1,6 +1,7 @@
 export const addAccount = (data) => {
     
 return (dispatch) => {
+        dispatch({ type: 'ADDING_ACCOUNTS'})
         fetch('http://127.0.0.1:3000/api/v1/accounts', {
             headers: {          //headers are a key that points to another object
                 'Content-Type': 'application/json',
