@@ -4,6 +4,7 @@ import Account from './Account'
 
 const Accounts = (props) => {
     // console.log(props)
+    // debugger;
     return(
         <div>
             {props.accounts.map(account =>

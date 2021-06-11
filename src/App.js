@@ -1,12 +1,20 @@
 import React from 'react';
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
+import {fetchAccounts} from './actions/fetchAccounts'
 import AccountsContainer from './containers/AccountsContainer';
 import Navbar from './components/Navbar';
 import Home from './components/Home'
 import About from './components/About'
 import {Route} from 'react-router-dom'
+// import AccountInput from './components/AccountInput'
+// import Accounts from './components/Accounts';
+// import Account from './components/Account';
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchAccounts()
+}
 
   render() {
     return (
@@ -14,10 +22,16 @@ class App extends React.Component {
         <Navbar />
         <Route exact path='/' component={Home}/>
         <Route exact path='/' component={About}/>
-        <AccountsContainer/>
+        <AccountsContainer accounts={this.props.accounts}/>
       </div>
     );
   }   
 }
 
-export default App;
+const mapStateToProps = state => {
+  return{
+      accounts: state.accounts
+  }
+}
+
+export default connect(mapStateToProps, {fetchAccounts})(App);

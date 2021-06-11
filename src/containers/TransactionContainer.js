@@ -5,12 +5,21 @@ import Transactions from '../components/Transcations'
 class TransactionContainer extends React.Component {
 
     render() {
-        return (
-            <div>
-                <TransactionInput account={this.props.account}/><br></br>
-                <Transactions transactions={this.props.account.transactions} account={this.props.account}/>
-            </div>
-        )
+        // debugger;
+        if (this.props.account) {
+            return (
+                <div>
+                    <TransactionInput account={this.props.account}/><br></br>
+                    <Transactions transactions={this.props.account.transactions} account={this.props.account}/>
+                </div>
+            )
+        }
+        else {
+            return(
+                <p>no transacations</p>
+            )
+        }
+        
     }
 
 

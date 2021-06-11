@@ -9,7 +9,7 @@ const Account = (props) => {
 
     // let account = props.accounts[props.match.params.id -1]
     let account = props.accounts.filter(account => account.id == props.match.params.id)[0]
-
+// debugger;
     // console.log(account)
     return (
         <div>
