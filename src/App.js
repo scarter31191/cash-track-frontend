@@ -6,9 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home'
 import About from './components/About'
 import {Route} from 'react-router-dom'
-// import AccountInput from './components/AccountInput'
-// import Accounts from './components/Accounts';
-// import Account from './components/Account';
+
 
 class App extends React.Component {
 

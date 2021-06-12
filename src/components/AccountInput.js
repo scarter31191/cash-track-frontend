@@ -17,6 +17,7 @@ class AccountInput extends  React.Component {
     }
 
     handleSubmit = (event) => {
+        // debugger;
         event.preventDefault()
         this.props.addAccount(this.state)
         this.setState({
@@ -24,7 +25,7 @@ class AccountInput extends  React.Component {
             balance: '', 
             goal_amount: ''
         })
-        // this.props.account.push(`/accounts`)
+        this.props.history.push('/accounts')
     }
 
     render() {

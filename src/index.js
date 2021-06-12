@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore, applyMiddleware, compose} from 'redux';
+import {createStore, applyMiddleware} from 'redux'; //compose
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom';
 import accountReducer from './reducers/accountReducer'
-// import Navbar from './components/Navbar';
-
-
+import '../src/index.css';
 import App from './App';
 
 // set up store
@@ -21,7 +19,6 @@ ReactDOM.render(
     <Provider store={myStore}>
       <Router>
         <App />
-        {/* <Navbar /> */}
       </Router> 
     </Provider>,
   document.getElementById('root')

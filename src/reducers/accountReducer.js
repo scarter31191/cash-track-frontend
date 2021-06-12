@@ -18,7 +18,9 @@ export default function accountReducer(state = {accounts: [], loading:false}, ac
                 loading: true
             }
         case 'ADD_ACCOUNT':
-            return {...state, accounts: [...state.accounts, action.payload]}
+            return {...state, 
+                accounts: [...state.accounts, action.payload]
+            }
         case 'ADDING_TRANSACTION':
             return {
                 ...state,
