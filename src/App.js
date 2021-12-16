@@ -4,8 +4,9 @@ import {fetchAccounts} from './actions/fetchAccounts'
 import AccountsContainer from './containers/AccountsContainer';
 import Navbar from './components/Navbar';
 import Home from './components/Home'
-import About from './components/About'
+// import About from './components/About'
 import {Route} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 class App extends React.Component {
@@ -19,8 +20,8 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Route exact path='/' component={Home}/>
-        <Route exact path='/' component={About}/>
         <AccountsContainer accounts={this.props.accounts}/>
+        {/* <Route exact path='/accounts' component={About}/> */}
       </div>
     );
   }   

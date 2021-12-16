@@ -9,9 +9,6 @@ import accountReducer from './reducers/accountReducer'
 import '../src/index.css';
 import App from './App';
 
-// set up store
-// let reducer = ''
-
 
 let myStore = createStore(accountReducer, composeWithDevTools(applyMiddleware(thunk)))
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {addAccount} from '../actions/addAccount';
 
-class AccountInput extends  React.Component {
+class AccountInput extends React.Component {
 
     state = {
         name: '', 
@@ -31,6 +31,7 @@ class AccountInput extends  React.Component {
     render() {
         return(
             <div>
+                <h1>New Account</h1>
                 <form onSubmit={this.handleSubmit}>
                     <lable>Account Name: </lable>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br></br>
